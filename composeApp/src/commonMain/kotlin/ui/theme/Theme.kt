@@ -1,0 +1,68 @@
+package ui.theme
+
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
+
+val DarkColorScheme = darkColorScheme(
+    primary = DarkPrimary,
+    secondary = DarkSecondary,
+    tertiary = DarkTertiary,
+    onPrimary = DarkOnPrimary,
+    primaryContainer = DarkPrimaryContainer,
+    onPrimaryContainer = DarkPrimaryOnContainer,
+    onSecondary = DarkOnSecondary,
+    secondaryContainer = DarkSecondaryContainer,
+    onSecondaryContainer = DarkOnSecondaryContainer,
+    onTertiary = DarkOnTertiary,
+    onTertiaryContainer = DarkOnTertiaryContainer,
+    tertiaryContainer = DarkTertiaryContainer,
+    background = DarkBackground,
+    onBackground = DarkOnBackground,
+    surface = DarkSurface,
+    onSurface = DarkOnSurface,
+    surfaceVariant = DarkSurfaceVariant,
+    onSurfaceVariant = DarkOnSurfaceVariant,
+    error = DarkError,
+    onError = DarkOnError,
+    errorContainer = DarkErrorContainer,
+    onErrorContainer = DarkOnErrorContainer,
+    outline = DarkOutline,
+    inverseOnSurface = DarkInverseOnSurface,
+    inverseSurface = DarkInverseSurface,
+    inversePrimary = DarkInversePrimary,
+    surfaceTint = DarkSurfaceTint,
+    outlineVariant = DarkOutlineVariant,
+    scrim = DarkScrim
+)
+
+val LightColorScheme = lightColorScheme(
+    primary = LightPrimary,
+    secondary = LightSecondary,
+    tertiary = LightTertiary,
+    onPrimary = LightOnPrimary,
+    primaryContainer = LightPrimaryContainer,
+    onPrimaryContainer = LightOnPrimaryContainer,
+    onSecondary = LightOnSecondary,
+    secondaryContainer = LightSecondaryContainer,
+    onSecondaryContainer = LightOnSecondaryContainer,
+    onTertiary = LightOnTertiary,
+    onTertiaryContainer = LightOnTertiaryContainer,
+    tertiaryContainer = LightTertiaryContainer,
+    background = LightBackground,
+    onBackground = LightOnBackground,
+    surface = LightSurface,
+    onSurface = LightOnSurface,
+    surfaceVariant = LightSurfaceVariant,
+    onSurfaceVariant = LightOnSurfaceVariant,
+    error = LightError,
+    onError = LightOnError,
+    errorContainer = LightErrorContainer,
+    onErrorContainer = LightOnErrorContainer,
+    outline = LightOutline,
+    inverseOnSurface = LightInverseOnSurface,
+    inverseSurface = LightInverseSurface,
+    inversePrimary = LightInversePrimary,
+    surfaceTint = LightSurfaceTint,
+    outlineVariant = LightOutlineVariant,
+    scrim = LightScrim
+)

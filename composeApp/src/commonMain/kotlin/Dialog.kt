@@ -12,12 +12,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -30,7 +29,6 @@ import androidx.compose.ui.window.DialogProperties
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun ImageSourceOptionDialog(
     onDismissRequest: () -> Unit,
@@ -42,12 +40,12 @@ fun ImageSourceOptionDialog(
         properties = DialogProperties(dismissOnBackPress = true, dismissOnClickOutside = true)
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth().background(MaterialTheme.colors.surface)
+            modifier = Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface)
                 .padding(20.dp), horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
                 text = "Select an Image Source",
-                color = MaterialTheme.colors.onSurface,
+                color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(10.dp))
@@ -64,7 +62,7 @@ fun ImageSourceOptionDialog(
                     painter = painterResource("ic_camera.xml"),
                     contentDescription = null
                 )*/
-                Text(text = "Camera", color = MaterialTheme.colors.onSurface)
+                Text(text = "Camera", color = MaterialTheme.colorScheme.onSurface)
             }
             Row(
                 modifier = Modifier.fillMaxWidth().padding(vertical = 15.dp).clickable {
@@ -79,7 +77,7 @@ fun ImageSourceOptionDialog(
                     painter = painterResource("ic_images.xml"),
                     contentDescription = null
                 )*/
-                Text(text = "Gallery", color = MaterialTheme.colors.onSurface)
+                Text(text = "Gallery", color = MaterialTheme.colorScheme.onSurface)
             }
         }
     }
@@ -108,7 +106,7 @@ fun AlertMessageDialog(
             shape = RoundedCornerShape(size = 12.dp)
         ) {
             Column(
-                modifier = Modifier.background(MaterialTheme.colors.secondaryVariant)
+                modifier = Modifier.background(MaterialTheme.colorScheme.secondaryContainer)
                     .padding(all = 16.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -123,18 +121,18 @@ fun AlertMessageDialog(
                 Spacer(modifier = Modifier.height(20.dp))
                 Text(
                     text = title,
-                    fontSize = MaterialTheme.typography.subtitle2.fontSize,
+                    fontSize = MaterialTheme.typography.titleLarge.fontSize,
                     fontWeight = FontWeight.Medium,
-                    color = MaterialTheme.colors.onBackground,
+                    color = MaterialTheme.colorScheme.onBackground,
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(10.dp))
                 message?.let {
                     Text(
                         text = it,
-                        fontSize = MaterialTheme.typography.h6.fontSize,
+                        fontSize = MaterialTheme.typography.titleLarge.fontSize,
                         fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colors.onBackground.copy(alpha = 0.5f),
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f),
                         textAlign = TextAlign.Center
                     )
                 }
@@ -150,7 +148,7 @@ fun AlertMessageDialog(
                                 onNegativeClick()
                             }, colors = ButtonDefaults.buttonColors(
                                 contentColor = Color.White,
-                                backgroundColor = MaterialTheme.colors.primary
+                                containerColor = MaterialTheme.colorScheme.primary
                             )
                         ) {
                             Text(text = it, textAlign = TextAlign.Center, maxLines = 1)
@@ -164,7 +162,7 @@ fun AlertMessageDialog(
                                 onPositiveClick()
                             }, colors = ButtonDefaults.buttonColors(
                                 contentColor = Color.White,
-                                backgroundColor = MaterialTheme.colors.primary
+                                containerColor = MaterialTheme.colorScheme.primary
                             )
                         ) {
                             Text(text = it, textAlign = TextAlign.Center, maxLines = 1)
