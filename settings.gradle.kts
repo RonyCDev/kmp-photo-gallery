@@ -1,4 +1,4 @@
-rootProject.name = "photo-gallery"
+rootProject.name = "kmp-photo-gallery"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
